@@ -1,0 +1,35 @@
+# ========================
+# Node / NPM
+# ========================
+/backend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ========================
+# Prisma
+# ========================
+/backend/generated/
+
+# ========================
+# Environment Variables
+# ========================
+/backend/.env
+.env                     # just in case someone puts one at root
+
+# ========================
+# Logs / Misc
+# ========================
+logs/
+*.pid
+*.seed
+*.pid.lock
+.node_repl_history
+.DS_Store
+
+# ========================
+# Editor / OS files
+# ========================
+.vscode/
+*.swp
