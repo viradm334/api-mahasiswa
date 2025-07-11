@@ -7,8 +7,13 @@ const port = process.env.PORT || 3000;
 const prisma = new PrismaClient();
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.status(200).json({message: 'Hello World'});
+app.get('/mahasiswa', async (req, res) => {
+    try{
+        const mhs = await prisma.user.findMany();
+        res.status(200).json({message: 'Data mahasiswa berhasil diambil!', data: mhs});
+    }catch(err){
+        res.status(500).json({message: err.message});
+    }
 });
 
 app.post('/mahasiswa', async (req, res) => {
