@@ -1,11 +1,13 @@
 const express = require('express');
 require('dotenv').config();
+const cors = require('cors');
 const app = express();
 const {PrismaClient} = require('./generated/prisma');
 const port = process.env.PORT || 3000;
 
 const prisma = new PrismaClient();
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
 
 app.get('/mahasiswa', async (req, res) => {
     try{
