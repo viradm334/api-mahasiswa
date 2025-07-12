@@ -23,7 +23,7 @@ Berikut adalah endpoint yang tersedia:
 2. Install NPM dengan command berikut:
 
  ```powershell
-   cp env.example .env
+   npm install
 ```
 
 3. Copy isi file dari .env.example ke dalam file .env.
