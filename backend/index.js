@@ -18,6 +18,24 @@ app.get('/mahasiswa', async (req, res) => {
     }
 });
 
+app.get('/mahasiswa/:id', async(req, res) => {
+    const {id} = req.params;
+
+    try{
+        const mhs = await prisma.user.findUnique({
+            where:{id}
+        });
+
+        if(!mhs){
+            res.status(404).json({message: "Mahasiswa tidak ditemukan!"});
+        }
+
+        res.status(200).json({message: "Data mahasiswa berhasil ditemukan!", data: mhs});
+    }catch(err){
+        res.status(500).json({message: err.message});
+    }
+})
+
 app.post('/mahasiswa', async (req, res) => {
     try{
         const {nama, nim, email, jurusan} = req.body;
