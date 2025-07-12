@@ -9,10 +9,10 @@
 </head>
 <body>
     <button class="btn btn-primary" id="dashboard-btn">Dashboard</button>
-    <button class="btn btn-primary" id="add-btn">Go to Add Form</button>
+    <button class="btn btn-success" id="add-btn">Tambah Mahasiswa</button>
 
     <section id="dashboard" class="">
-        <h4>Data Mahasiswa</h4>
+        <h4 class="text-center mb-3">Data Mahasiswa</h4>
 
         <table class="table table-bordered">
             <thead>
@@ -31,61 +31,71 @@
     </section>
 
     <section id="add-mahasiswa" class="d-none">
-        <h4>Tambah Mahasiswa Baru</h4>
-
-        <form class="row g-3" id="form-tambah">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="inputEmail4" name="nama">
+        <div class="container d-flex justify-content-center align-items-center mt-3">
+            <div class="card w-50">
+                <div class="card-body">
+                    <h4 class="text-center mb-3">Tambah Mahasiswa Baru</h4>
+                    <form class="row g-3" id="form-tambah">
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label">Nama</label>
+                          <input type="text" class="form-control" id="inputEmail4" name="nama">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="inputCity" name="email">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label">NIM</label>
+                          <input type="text" class="form-control" id="inputCity" name="nim">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label">Jurusan</label>
+                          <input type="text" class="form-control" id="inputCity" name="jurusan">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                      </form>
+                </div>
             </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputCity" name="email">
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">NIM</label>
-              <input type="text" class="form-control" id="inputCity" name="nim">
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Jurusan</label>
-              <input type="text" class="form-control" id="inputCity" name="jurusan">
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </form>
+        </div>
     </section>
 
     <section id="edit-mahasiswa" class="d-none">
-        <h4>Edit Data Mahasiswa</h4>
-      
-        <form class="row g-3" id="form-edit">
-          <input type="hidden" id="edit-id" name="id" />
-      
-          <div class="col-md-6">
-            <label class="form-label">Nama</label>
-            <input type="text" class="form-control" id="edit-nama" name="nama" />
-          </div>
-      
-          <div class="col-md-6">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" id="edit-email" name="email" />
-          </div>
-      
-          <div class="col-md-6">
-            <label class="form-label">NIM</label>
-            <input type="text" class="form-control" id="edit-nim" name="nim" />
-          </div>
-      
-          <div class="col-md-6">
-            <label class="form-label">Jurusan</label>
-            <input type="text" class="form-control" id="edit-jurusan" name="jurusan" />
-          </div>
-      
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
+        <div class="container d-flex justify-content-center align-items-center mt-3">
+            <div class="card w-50">
+                <div class="card-body">
+                    <h4 class="text-center mb-3">Edit Data Mahasiswa</h4>
+                    <form class="row g-3" id="form-edit">
+                      <input type="hidden" id="edit-id" name="id" />
+                  
+                      <div class="col-md-6">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="edit-nama" name="nama" />
+                      </div>
+                  
+                      <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="edit-email" name="email" />
+                      </div>
+                  
+                      <div class="col-md-6">
+                        <label class="form-label">NIM</label>
+                        <input type="text" class="form-control" id="edit-nim" name="nim" />
+                      </div>
+                  
+                      <div class="col-md-6">
+                        <label class="form-label">Jurusan</label>
+                        <input type="text" class="form-control" id="edit-jurusan" name="jurusan" />
+                      </div>
+                  
+                      <div class="d-flex justify-content-center align-items-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
       </section>
       
 

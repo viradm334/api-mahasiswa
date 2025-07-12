@@ -183,3 +183,6 @@ function showEditForm(mhs) {
   sectionTambah.classList.add("d-none");
   sectionDashboard.classList.add("d-none");
 }
+
+
+loadMhs();
